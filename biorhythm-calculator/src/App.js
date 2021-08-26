@@ -28,6 +28,7 @@ function App() {
           </IonItem>
           <p>Name: {name}</p>
           <p>Date of Birth: {birthDate}</p>
+          <p></p>
         </IonContent>
       </IonApp>
     </div>
