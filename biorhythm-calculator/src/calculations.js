@@ -14,3 +14,13 @@ export function calculateBiorhythms(birthDate, targetDate) {
     intellectual: calculateBiorhythm(birthDate, targetDate, 33),
   };
 }
+
+export function calculateBiorhythmSeries(birthDay, startDate, size) {
+  const series = [];
+  const startDay = dayjs(startDate).startOf("day");
+  for (let i = 0; i < size; i++) {
+    const targetDate = startDay.add(i, "days").toISOString();
+    series.push(calculateBiorhythms(birthDay, targetDate));
+  }
+  return series;
+}
